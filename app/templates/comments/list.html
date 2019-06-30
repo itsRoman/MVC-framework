@@ -1,0 +1,9 @@
+<div class="comments">
+<?php while($comment = $result->next()): ?>
+<h4><?php e($comment->author); ?> schrieb:</h4>
+<p><?php e($comment->content); ?></p>
+<?php endwhile; ?>
+</div>
+<div>
+<?php echo($commentsform); ?>
+</div>

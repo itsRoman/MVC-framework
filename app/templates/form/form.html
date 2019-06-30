@@ -1,0 +1,12 @@
+<form id="<?php echo($id); ?>" action="<?php echo($action); ?>" method="<?php echo($method); ?>">
+ <?php if(count($errors)): ?>
+ <p class="error"><?php foreach($errors as $error) echo($error . "<br />"); ?></p>
+ <?php endif; ?>
+ <fieldset>
+  <ol>
+   <?php foreach($elements as $id): ?>
+   <li><?php echo(${$id}); ?></li>
+   <?php endforeach; ?>
+  </ol>
+ </fieldset>
+</form>

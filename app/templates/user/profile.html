@@ -1,0 +1,16 @@
+<?php if(!empty($user)): ?>
+<h2>Roman's Profil</h2>
+<table>
+    <tr>
+        <td>Name</td>
+        <td>Roman Wilhelm</td>
+    </tr>
+    <tr>
+        <td>eMail</td>
+        <td>ads@asd.de</td>
+    </tr>
+</table>
+<?php else: ?>
+<p class="error">Benutzer nicht gefunden.</p>
+<?php endif; ?>
+<?php debug($user); ?>

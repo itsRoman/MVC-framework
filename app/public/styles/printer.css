@@ -1,0 +1,9 @@
+div#header, div#navi, div#box_wrapper, div#footer, p.news-info, form
+{
+    display:none;
+}
+
+*, p
+{
+    border:0;
+}

@@ -1,0 +1,7 @@
+<ul>
+ <li <?php if($this->active == "news") echo("id=\"active\""); ?>><a href="<?php url("news", true); ?>" accesskey="1">Neuigkeiten</a></li>
+ <li <?php if($this->active == "aboutme") echo("id=\"active\""); ?>><a href="<?php url("aboutme", true); ?>" accesskey="a">Über mich</a></li>
+ <li <?php if($this->active == "projects") echo("id=\"active\""); ?>><a href="<?php url("projects", true); ?>" accesskey="p">Projekte</a></li>
+ <li <?php if($this->active == "contact") echo("id=\"active\""); ?>><a href="<?php url("contact", true); ?>" accesskey="c">Kontakt</a></li>
+ <li <?php if($this->active == "impressum") echo("id=\"active\""); ?>><a href="<?php url("impressum", true); ?>" accesskey="i">Impressum</a></li>
+</ul>

@@ -1,0 +1,6 @@
+<h4>Neuigkeiten</h4>
+<ol>
+<?php while($news = $result->next()): ?>
+<li><?php makelink("news/full/{$news->id}", $news->headline, true); ?></li>
+<?php endwhile; ?>
+</ol>

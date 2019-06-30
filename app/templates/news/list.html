@@ -1,0 +1,5 @@
+<?php while($news = $result->next()): ?>
+<h2 class="news"><?php e($news->headline); ?></h2>
+<p class="news"><?php e($news->content); ?></p>
+<p class="news-info">geschrieben von roman am <?php t($news->created, "j.n.o \u\m G \U\h\\r i"); ?> -- <?php makelink("news/full/{$news->id}", formatPlural($news->commentcount, array("Kommentar", "Kommentare")), true); ?></p>
+<?php endwhile; ?>

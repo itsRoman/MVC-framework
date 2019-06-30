@@ -1,0 +1,25 @@
+<h2>News Verwaltung</h2>
+<?php makelink("news/add", icon("page_add") . "News schreiben", true); ?>
+<table>
+    <colgroup span="3" class="big-td" />
+    <colgroup span="3" class="small-td" />
+    <tr>
+        <th>Überschrift</th>
+        <th>Autor</th>
+        <th>Datum</th>
+        <th>Kommentare</th>
+        <th>Veröffentlicht?</th>
+        <th>Aktionen</th>
+    </tr>
+<?php while($news = $result->next()): ?>
+<tr>
+    <td><?php e($news->headline); ?></td>
+    <td>roman</td>
+    <td><?php t($news->created); ?></td>
+    <td><?php echo($news->commentcount); ?></td>
+    <td><?php $news->published ?  icon("accept", "Ja", true) : icon("delete", "Nein", true) ?></td>
+    <td><?php makelink("news/edit/{$news->id}", icon("page_edit", "News editieren"), true); ?>
+    <?php makePrompt("news/delete/{$news->id}", icon("page_delete", "News löschen!"), "post"); ?></td>
+</tr>
+<?php endwhile; ?>
+</table>

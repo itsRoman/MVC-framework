@@ -1,0 +1,21 @@
+<h2>Kontaktanfragen</h2>
+<table>
+    <colgroup span="2" class="small-td" />
+    <colgroup span="1" class="big-td" />
+    <colgroup span="1" class="small-td" />
+    <tr>
+        <th>Name</th>
+        <th>Datum</th>
+        <th>Text</th>
+        <th>Aktionen</th>
+    </tr>
+<?php while($contact = $result->next()): ?>
+<tr>
+    <td><?php e($contact->author); ?></td>
+    <td><?php t($contact->created); ?></td>
+    <td><?php echo(substr($contact->content, 0, 100) . " ..."); ?></td>
+    <td><?php makelink("contact/show/{$contact->id}", icon("page_edit", "Zeigen"), true); ?>
+    <?php makePrompt("contact/delete/{$contact->id}", icon("page_delete", "Anfrage löschen!"), "post"); ?></td>
+</tr>
+<?php endwhile; ?>
+</table>

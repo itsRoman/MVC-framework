@@ -1,0 +1,8 @@
+<?php if(count($news)): ?>
+<h2 class="news"><?php e($news->headline); ?></h2>
+<p class="news"><?php e($news->content); ?><br /><?php e($news->content_more); ?></p>
+<p class="news-info">geschrieben von roman am 26.2.10</p>
+<?php echo($comments); ?>
+<?php else: ?>
+<p>Nicht gefunden.</p>
+<?php endif; ?>
