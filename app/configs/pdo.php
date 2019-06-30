@@ -13,7 +13,7 @@ $config = array(
 $config = array(
 "dsn" => "mysql:dbname=std;host=127.0.0.1",
 "user" => "root",
-"password" => "ernie4");
+"password" => "xxx");
 /* */
 
 return $config;
