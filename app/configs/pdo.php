@@ -6,7 +6,7 @@
 $config = array(
 "dsn" => "mysql:dbname=db11190_01;host=u11190.csql.xlhost.de",
 "user" => "sql11190-1",
-"password" => "ernie4");
+"password" => "asdasdasdasd");
 */
 
 /* Local */
